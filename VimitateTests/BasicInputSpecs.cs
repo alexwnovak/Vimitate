@@ -5,10 +5,11 @@ public sealed class BasicInputSpecs : Feature
 {
     private readonly VimEngine _vimEngine = new();
 
-    [When("I press 'A'")]
-    public void WhenIPressA()
+    [When("I press (.*)")]
+    public void WhenIPressA(object value)
     {
-        _vimEngine.KeyPress(Key.A);
+        var key = value.ConvertToKey();
+        _vimEngine.KeyPress(key);
     }
 
     [Then(@"the current text is ""(.*)""")]
