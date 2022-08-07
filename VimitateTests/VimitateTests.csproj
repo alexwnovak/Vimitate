@@ -26,4 +26,8 @@
     <ProjectReference Include="..\Vimitate\Vimitate.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="BasicInput.feature" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
