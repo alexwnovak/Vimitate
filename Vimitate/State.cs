@@ -1,3 +1,3 @@
 namespace Vimitate;
 
-public record class State( string Text );
+public record class State(string Text);
