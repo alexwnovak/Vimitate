@@ -11,9 +11,9 @@ public sealed class BasicInputSpecs : Feature
         _vimEngine.KeyPress(Key.A);
     }
 
-    [Then("the current text is 'A'")]
-    public void ThenTheCurrentTextIsA()
+    [Then(@"the current text is ""(.*)""")]
+    public void ThenTheTextIsTheExpectedValue(string expectedText)
     {
-        _vimEngine.GetState().Text.Should().Be("A");
+        _vimEngine.GetState().Text.Should().Be(expectedText);
     }
 }
