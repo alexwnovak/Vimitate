@@ -1,20 +1,25 @@
+
+
 namespace VimitateTests;
 
 [FeatureFile("./BasicInput.feature")]
 public sealed class BasicInputSpecs : Feature
 {
-    private readonly VimEngine _vimEngine = new();
-
-    [When("I press (.*)")]
-    public void WhenIPress(object value)
+    [When("I press the following, the text matches the expected value:")]
+    public void WhenIPressTheFollowing(DataTable dataTable)
     {
-        var key = value.ConvertToKey();
-        _vimEngine.KeyPress(key);
-    }
+        using var assertionScope = new AssertionScope();
 
-    [Then(@"the current text is ""(.*)""")]
-    public void ThenTheTextIsTheExpectedValue(string expectedText)
-    {
-        _vimEngine.GetState().Text.Should().Be(expectedText);
+        foreach (var row in dataTable.Rows.Skip(1))
+        {
+            string keyString = row.Cells.ElementAt(0).Value;
+            Key key = Enum.Parse<Key>(keyString);
+
+            var engine = new VimEngine();
+            engine.KeyPress(key);
+
+            string expected = row.Cells.ElementAt(1).Value;
+            engine.GetState().Text.Should().Be(expected);
+        }
     }
 }

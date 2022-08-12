@@ -11,6 +11,6 @@ public class VimEngine
 
     public void KeyPress(Key key)
     {
-        _text = "A";
+        _text = key.ToString();
     }
 }
