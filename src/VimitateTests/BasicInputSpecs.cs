@@ -5,7 +5,7 @@ namespace VimitateTests;
 [FeatureFile("./BasicInput.feature")]
 public sealed class BasicInputSpecs : Feature
 {
-    [When("I press the following, the text matches the expected value:")]
+    [When("I press the following lowercase letter, it gets inserted into the text:")]
     public void WhenIPressTheFollowing(DataTable dataTable)
     {
         using var assertionScope = new AssertionScope();
