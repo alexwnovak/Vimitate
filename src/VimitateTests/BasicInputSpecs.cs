@@ -3,7 +3,7 @@ namespace VimitateTests;
 [FeatureFile("./BasicInput.feature")]
 public sealed class BasicInputSpecs : Feature
 {
-    [When("I press the following key, it gets inserted into the text:")]
+    [When("I press the following, it gets inserted into the text:")]
     public void WhenIPressTheFollowingKeyItGetsInsertedIntoTheText(DataTable dataTable)
     {
         using var assertionScope = new AssertionScope();
