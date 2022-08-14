@@ -4,12 +4,7 @@ internal static class ObjectExtensions
 {
     public static Keypress ConvertToKeypress(this object obj)
     {
-        if (obj is null)
-        {
-            throw new ArgumentNullException(nameof(obj), "Object parameter must not be null");
-        }
-
-        string name = obj.ToString();
+        string name = obj.ToString()!;
 
         // First, try to parse the string to see if it's a direct enum name
 
