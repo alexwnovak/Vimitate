@@ -45,6 +45,7 @@ public static class KeyExtensions
         [Key.D9] = '9',
 
         // Symbols
+        [Key.Backtick] = '`',
         [Key.Hyphen] = '-',
         [Key.Equals] = '=',
         [Key.LeftBracket] = '[',
@@ -100,6 +101,7 @@ public static class KeyExtensions
         [Key.D9] = '(',
 
         // Symbols
+        [Key.Backtick] = '~',
         [Key.Hyphen] = '_',
         [Key.Equals] = '+',
         [Key.LeftBracket] = '{',

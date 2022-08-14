@@ -42,6 +42,7 @@ public enum Key
     D7,
     D8,
     D9,
+    Backtick,
     Hyphen,
     Equals,
     LeftBracket,

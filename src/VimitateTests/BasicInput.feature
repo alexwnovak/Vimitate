@@ -96,6 +96,7 @@ Scenario: I can enter all the numeric symbols
 Scenario: I can enter all regular symbols
     When I press the following key, it gets inserted into the text:
     | key          | expected |
+    | Backtick     | `        |
     | Hyphen       | -        |
     | Equals       | =        |
     | LeftBracket  | [        |
@@ -111,6 +112,7 @@ Scenario: I can enter all regular symbols
 Scenario: I can enter all symbols when pressing shift
     When I press the following key, it gets inserted into the text:
     | key                | expected |
+    | Shift+Backtick     | ~        |
     | Shift+Hyphen       | _        |
     | Shift+Equals       | +        |
     | Shift+LeftBracket  | {        |
@@ -121,4 +123,3 @@ Scenario: I can enter all symbols when pressing shift
     | Shift+Comma        | <        |
     | Shift+Period       | >        |
     | Shift+ForwardSlash | ?        |
-
