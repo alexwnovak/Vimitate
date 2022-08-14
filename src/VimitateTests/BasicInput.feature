@@ -61,3 +61,18 @@ Scenario: I can enter all uppercase letters
     | Shift+X | X        |
     | Shift+Y | Y        |
     | Shift+Z | Z        |
+
+@Acceptance
+Scenario: I can enter all digits
+    When I press the following key, it gets inserted into the text:
+    | key | expected |
+    | D0  | 0        |
+    | D1  | 1        |
+    | D2  | 2        |
+    | D3  | 3        |
+    | D4  | 4        |
+    | D5  | 5        |
+    | D6  | 6        |
+    | D7  | 7        |
+    | D8  | 8        |
+    | D9  | 9        |
