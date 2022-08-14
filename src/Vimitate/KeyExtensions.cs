@@ -1,6 +1,6 @@
 namespace Vimitate;
 
-public static class KeyExtensions
+internal static class KeyExtensions
 {
     private static readonly Dictionary<Key, char> _keyTable = new Dictionary<Key, char>
     {
