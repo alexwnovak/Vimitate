@@ -76,3 +76,49 @@ Scenario: I can enter all digits
     | D7  | 7        |
     | D8  | 8        |
     | D9  | 9        |
+
+@Acceptance
+Scenario: I can enter all the numeric symbols
+    When I press the following key, it gets inserted into the text:
+    | key       | expected |
+    | Shift+D0  | )        |
+    | Shift+D1  | !        |
+    | Shift+D2  | @        |
+    | Shift+D3  | #        |
+    | Shift+D4  | $        |
+    | Shift+D5  | %        |
+    | Shift+D6  | ^        |
+    | Shift+D7  | &        |
+    | Shift+D8  | *        |
+    | Shift+D9  | (        |
+
+@Acceptance
+Scenario: I can enter all regular symbols
+    When I press the following key, it gets inserted into the text:
+    | key          | expected |
+    | Hyphen       | -        |
+    | Equals       | =        |
+    | LeftBracket  | [        |
+    | RightBracket | ]        |
+    | Backslash    | \        |
+    | Semicolon    | ;        |
+    | Apostrophe   | '        |
+    | Comma        | ,        |
+    | Period       | .        |
+    | ForwardSlash | /        |
+
+@Acceptance
+Scenario: I can enter all symbols when pressing shift
+    When I press the following key, it gets inserted into the text:
+    | key                | expected |
+    | Shift+Hyphen       | _        |
+    | Shift+Equals       | +        |
+    | Shift+LeftBracket  | {        |
+    | Shift+RightBracket | }        |
+    | Shift+Backslash    | \|       |
+    | Shift+Semicolon    | :        |
+    | Shift+Apostrophe   | "        |
+    | Shift+Comma        | <        |
+    | Shift+Period       | >        |
+    | Shift+ForwardSlash | ?        |
+
