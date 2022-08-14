@@ -30,3 +30,34 @@ Scenario: I can enter all lowercase letters
     | X   | x        |
     | Y   | y        |
     | Z   | z        |
+
+@Acceptance
+Scenario: I can enter all uppercase letters
+    When I press the following key combination, it gets inserted into the text:
+    | key     | expected |
+    | Shift+A | A        |
+    | Shift+B | B        |
+    | Shift+C | C        |
+    | Shift+D | D        |
+    | Shift+E | E        |
+    | Shift+F | F        |
+    | Shift+G | G        |
+    | Shift+H | H        |
+    | Shift+I | I        |
+    | Shift+J | J        |
+    | Shift+K | K        |
+    | Shift+L | L        |
+    | Shift+M | M        |
+    | Shift+N | N        |
+    | Shift+O | O        |
+    | Shift+P | P        |
+    | Shift+Q | Q        |
+    | Shift+R | R        |
+    | Shift+S | S        |
+    | Shift+T | T        |
+    | Shift+U | U        |
+    | Shift+V | V        |
+    | Shift+W | W        |
+    | Shift+X | X        |
+    | Shift+Y | Y        |
+    | Shift+Z | Z        |
