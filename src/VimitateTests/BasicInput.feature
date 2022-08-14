@@ -2,7 +2,7 @@ Feature: Basic input
 
 @Acceptance
 Scenario: I can enter all lowercase letters
-    When I press the following lowercase letter, it gets inserted into the text:
+    When I press the following key, it gets inserted into the text:
     | key | expected |
     | A   | a        |
     | B   | b        |
@@ -33,7 +33,7 @@ Scenario: I can enter all lowercase letters
 
 @Acceptance
 Scenario: I can enter all uppercase letters
-    When I press the following key combination, it gets inserted into the text:
+    When I press the following key, it gets inserted into the text:
     | key     | expected |
     | Shift+A | A        |
     | Shift+B | B        |
