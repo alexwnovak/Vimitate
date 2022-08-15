@@ -2,6 +2,7 @@ namespace Vimitate;
 
 public class VimEngine
 {
+    private InputMode _inputMode = InputMode.Normal;
     private string _text = "";
 
     public State GetState()
@@ -9,13 +10,23 @@ public class VimEngine
         return new(_text);
     }
 
-    public void KeyPress(Key key)
+    public void Clear()
     {
-        _text += key.ToChar(false);
+        _text = "";
     }
 
     public void KeyPress(Keypress keypress)
     {
-        _text += keypress.ToChar();
+        if (_inputMode == InputMode.Normal)
+        {
+            if (keypress.Key == Key.I)
+            {
+                _inputMode = InputMode.Insert;
+            }
+        }
+        else if (_inputMode == InputMode.Insert)
+        {
+            _text += keypress.ToChar();
+        }
     }
 }

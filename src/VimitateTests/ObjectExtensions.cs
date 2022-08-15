@@ -2,6 +2,18 @@ namespace VimitateTests;
 
 internal static class ObjectExtensions
 {
+    public static Keypress ConvertToKeypress(this char c)
+    {
+        string stringValue = c.ToString().ToUpper();
+
+        if (!Enum.TryParse(stringValue, out Key key))
+        {
+            throw new FormatException(@$"Could not covert value ""{stringValue}"" to Key instance");
+        }
+
+        return new Keypress(key);
+    }
+
     public static Keypress ConvertToKeypress(this object obj)
     {
         string name = obj.ToString()!;

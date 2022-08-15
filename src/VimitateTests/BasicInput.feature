@@ -2,7 +2,8 @@ Feature: Basic input
 
 @Acceptance
 Scenario: I can enter all lowercase letters
-    When I press the following, it gets inserted into the text:
+    When I press 'i'
+    And I press the following, it gets inserted into the text:
     | key | expected |
     | A   | a        |
     | B   | b        |
@@ -33,7 +34,8 @@ Scenario: I can enter all lowercase letters
 
 @Acceptance
 Scenario: I can enter all uppercase letters
-    When I press the following, it gets inserted into the text:
+    When I press 'i'
+    And I press the following, it gets inserted into the text:
     | key     | expected |
     | Shift+A | A        |
     | Shift+B | B        |
@@ -64,7 +66,8 @@ Scenario: I can enter all uppercase letters
 
 @Acceptance
 Scenario: I can enter all digits
-    When I press the following, it gets inserted into the text:
+    When I press 'i'
+    And I press the following, it gets inserted into the text:
     | key | expected |
     | D0  | 0        |
     | D1  | 1        |
@@ -79,7 +82,8 @@ Scenario: I can enter all digits
 
 @Acceptance
 Scenario: I can enter all the numeric symbols
-    When I press the following, it gets inserted into the text:
+    When I press 'i'
+    And I press the following, it gets inserted into the text:
     | key       | expected |
     | Shift+D0  | )        |
     | Shift+D1  | !        |
@@ -94,7 +98,8 @@ Scenario: I can enter all the numeric symbols
 
 @Acceptance
 Scenario: I can enter all regular symbols
-    When I press the following, it gets inserted into the text:
+    When I press 'i'
+    And I press the following, it gets inserted into the text:
     | key          | expected |
     | Backtick     | `        |
     | Hyphen       | -        |
@@ -110,7 +115,8 @@ Scenario: I can enter all regular symbols
 
 @Acceptance
 Scenario: I can enter all symbols when pressing shift
-    When I press the following, it gets inserted into the text:
+    When I press 'i'
+    And I press the following, it gets inserted into the text:
     | key                | expected |
     | Shift+Backtick     | ~        |
     | Shift+Hyphen       | _        |
